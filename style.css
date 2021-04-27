@@ -81,8 +81,8 @@ main .left {
   border-radius: 50%;
   height: 250px;
   text-align: center;
-  width: 100%;
-  margin-left: -20px;
+  width: 250px;
+  margin: 0 auto;
 }
 .cv-left-personal-info p {
   margin: 25px 0;
@@ -122,7 +122,7 @@ main .left {
 /* Right CV */
 
 main .right {
-  padding: 20px;
+  padding: 20px 10px 20px 30px;
 }
 
 .right div {
@@ -207,34 +207,103 @@ main .right {
 /* Media queries */
 
 @media (max-width: 800px) {
+  /* Name */
+  .name {
+    font-size: 32px;
+  }
+  .name h2 {
+    padding: 10px;
+  }
+
   .to-top {
     right: 5px;
   }
-  .cv-left-personal-info img {
-    border-radius: 50%;
-    height: auto;
-    text-align: center;
-    width: 150px;
-    margin: 0 5px 5px;
+
+  main {
+    flex-direction: column;
+    padding: 20px;
   }
+  main .left {
+    padding-left: 0;
+  }
+
   .cv-left-personal-info {
     display: flex;
   }
-  .cv-left-personal-info div {
-    margin-left: 50px;
+
+  .cv-left-personal-info img {
+    height: 200px;
+    width: 200px;
+    margin-left: 0;
+    display: block;
+    margin: 10px auto;
   }
+  .cv-left-personal-info p {
+    margin-left: 10px;
+  }
+
   .cv-left-menu {
     display: none;
   }
+
   main .right {
-    padding: 20px 0;
+    padding: 10px;
   }
 
-  .right div {
-    width: 90%;
-    margin: auto;
+  .right div h3 {
+    font-size: 24px;
   }
-  main {
+}
+
+@media (max-width: 500px) {
+  /* Name */
+  .name {
+    font-size: 22px;
+  }
+  .name h2 {
+    padding: 5px;
+  }
+  .cv-left-personal-info {
     flex-direction: column;
+  }
+
+  .cv-left-personal-info p {
+    margin-left: 50px;
+  }
+
+  main .right {
+    padding: 5px;
+  }
+
+  .right div h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 14px;
+  }
+  /* Name */
+  .name {
+    font-size: 18px;
+  }
+  .name h2 {
+    padding: 3px;
+  }
+  .cv-left-personal-info {
+    flex-direction: column;
+  }
+
+  .cv-left-personal-info p {
+    margin-left: 15px;
+  }
+
+  main .right {
+    padding: 3px;
+  }
+
+  .right div h3 {
+    font-size: 18px;
   }
 }
