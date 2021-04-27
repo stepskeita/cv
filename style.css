@@ -4,8 +4,26 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto", sans-serif;
+  position: relative;
+}
+
+/* to top */
+.to-top {
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+  background: teal;
+  padding: 10px;
+  font-size: 25px;
+  color: white;
+  visibility: hidden;
+  transition: visibility 0.3s ease;
 }
 
 header {
@@ -70,15 +88,22 @@ main .left {
   margin: 25px 0;
   display: flex;
 }
+.cv-left-personal-info p a {
+  text-decoration: none;
+  color: black;
+}
 .cv-left-personal-info p i {
   font-size: 18px;
   color: teal;
   margin-right: 10px;
 }
+.cv-left-menu {
+  position: sticky;
+  top: 0;
+}
 .cv-left-menu ul {
   list-style: none;
   margin-left: -20px;
-  position: sticky;
 }
 
 .cv-left-menu ul li {
@@ -113,6 +138,21 @@ main .right {
   font-size: 32px;
   color: teal;
   margin-bottom: 25px;
+}
+
+/* Biography */
+.right .biography p span {
+  font-weight: bold;
+}
+
+/* Education */
+.right .education p {
+  margin-bottom: 20px;
+}
+
+/* Experience */
+.right .experience p {
+  margin-bottom: 20px;
 }
 
 /* hobbies */
@@ -152,4 +192,49 @@ main .right {
   margin-right: 10px;
   font-size: 22px;
   font-weight: bold;
+}
+
+/*  */
+
+.right .references ul {
+  list-style: none;
+}
+
+.right .references ul li {
+  margin-bottom: 20px;
+}
+
+/* Media queries */
+
+@media (max-width: 800px) {
+  .to-top {
+    right: 5px;
+  }
+  .cv-left-personal-info img {
+    border-radius: 50%;
+    height: auto;
+    text-align: center;
+    width: 150px;
+    margin: 0 5px 5px;
+  }
+  .cv-left-personal-info {
+    display: flex;
+  }
+  .cv-left-personal-info div {
+    margin-left: 50px;
+  }
+  .cv-left-menu {
+    display: none;
+  }
+  main .right {
+    padding: 20px 0;
+  }
+
+  .right div {
+    width: 90%;
+    margin: auto;
+  }
+  main {
+    flex-direction: column;
+  }
 }

@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/me_passport.jpg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title>Alieu Keita</title>
 </head>
 <body>
 
     <!-- HEADER -->
-    <header>
+    <header id="header">
         <div class="wallpaper">
             <img src="img/img2.jpg" alt="Resume">
         </div>
@@ -29,36 +30,38 @@
             <div class="cv-left-personal-info">
                 <img src="img/me_passport.jpg" alt="Alieu Keita passport pic">
 
+              <div>
                 <p><i class="fas fa-map-marker-alt"></i> Essau North Bank Region, The Gambia</p>
 
                 <p><i class="fas fa-envelope"></i> alieukeita201@gmail.com</p>
 
-                <p><i class="fab fa-linkedin-in"></i> https://www.linkedin.com/in/alieukeita/</p>
+                <p><i class="fab fa-linkedin-in"></i><a href="https://www.linkedin.com/in/alieukeita/" target="_blank">https://www.linkedin.com/in/alieukeita/</a></p>
 
-                <p><i class="fab fa-github"></i>https://github.com/elsalvacion</p>
+                <p><i class="fab fa-github"></i><a href="https://github.com/elsalvacion" target="_blank">https://github.com/elsalvacion</a></p>
+              </div>
             </div>
             <div class="cv-left-menu">
                 <ul>
-                    <li><a href="#">Biography</a></li>
-                    <li><a href="#">Hobbies</a></li>
-                    <li><a href="#">Education</a></li>
-                    <li><a href="#">Experience</a></li>
-                    <li><a href="#">Spoken Languages</a></li>
-                    <li><a href="#">References</a></li>
+                    <li><a href="#biography">Biography</a></li>
+                    <li><a href="#hobbies">Hobbies</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#spoken-languages">Spoken Languages</a></li>
+                    <li><a href="#references">References</a></li>
                 </ul>
             </div>
         </section>
 
         <!-- RIGHT SIDE CONTENT: MAIN CV CONTENT -->
         <section class="right">
-            <div class="biography">
+            <div id="biography" class="biography">
                 <h3>Biography</h3>
                 <p>
-                    Self-taught Application Development Enthusiast specializing in <span>full stack JavaScript application development</span>. Experienced with all stages of the development cycle for dynamic web projects. Versed in numerous programming languages including <span>C, Java with working knowledge of C++, PHP, Data Structures and Algorithm, and WordPress</span>.
+                    Self-taught Application Development Enthusiast specializing in <span>fullstack JavaScript application development</span>. Experienced with all stages of the development cycle for dynamic web projects. Versed in numerous programming languages including <span>C, Java with working knowledge of C++, PHP, Data Structures and Algorithm, and WordPress</span>.
                 </p>
             </div>
 
-            <div class="hobbies">
+            <div id="hobbies" class="hobbies">
                 <h3>Hobbies</h3>
                 <ul>
                     <li>Multi Tasking</li>
@@ -69,7 +72,7 @@
                 </ul>
             </div>
 
-            <div class="education">
+            <div id="education" class="education">
                 <h3>Education</h3>
                 <p>
                 <h4>High School Diploma in Science : </h4> 2015 - 2018 <i>Charles Jow Memorial Academy, GM.</i>
@@ -79,7 +82,7 @@
                 </p>
             </div>
 
-            <div class="experience">
+            <div id="experience" class="experience">
                 <h3>Experiences</h3>
                 <p>
                 <h4>Teaching Assistant : </h4> 08/2018 to 1/2019
@@ -91,7 +94,7 @@
                 </p>
             </div>
 
-            <div class="spoken-languages">
+            <div id="spoken-languages" class="spoken-languages">
                 <h3>Spoken Languages</h3>
                 <ul>
                     <li>English Language <span>(Advance)</span></li>
@@ -102,33 +105,26 @@
                 </ul>
             </div>
 
-            <div class="references">
+            <div id="references" class="references">
                 <h3>References</h3>
                 <ul>
                     <li>
                         <span><h4>Mr. Ebrima M.S. Njie</h4></span> (Head of Science Department, Charles Jow Memorial Academy)
-                        <p>+220 7072193 or ebrimamsnjie@yahoo.com</p>
+                        <p><i><b>+220 7072193 or ebrimamsnjie@yahoo.com</b></i></p>
                     </li>
                     <li>
-                        <span><h4>•	Mrs. Mariama Sanyang</h4></span> (Science Teacher, Charles Jow Memorial Academy)
-                        <p>+220 3014782</p>
+                        <span><h4>Mrs. Mariama Sanyang</h4></span> (Science Teacher, Charles Jow Memorial Academy)
+                        <p><i><b>+220 3014782</b></i></p>
                     </li>
                     
                 </ul>
             </div>
-            <div class="programming-languages">
-                <h3>programming Languages</h3>
-                <ul>
-                    <li>English Language <span>(Advance)</span></li>
-                    <li>Spanish <span>(Novice)</span></li>
-                    <li>Mandinka <span>(Advance)</span></li>
-                    <li>Wollof <span>(Advance)</span></li>
-                    <li>Fula <span>(Advance)</span></li>
-                </ul>
-            </div>
+          
         </section>
         
     </main>
+
+    <a href="#header" class="to-top"><i class="fas fa-arrow-up"></i></a>
 <script src="app.js"></script>
 </body>
 </html>
