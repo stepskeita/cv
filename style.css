@@ -12,6 +12,78 @@ body {
   font-family: "Roboto", sans-serif;
   position: relative;
 }
+nav {
+  background: #f3f3f3;
+  color: white;
+  position: sticky;
+  top: 0;
+  display: none;
+  padding: 0px 15px;
+}
+nav i {
+  padding: 5px;
+  cursor: pointer;
+  color: teal;
+}
+
+/* Sidenav */
+.sidenav-container {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.2);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 500;
+  transform: translateX(-100vw);
+  transition: all 0.5s ease-in-out;
+}
+
+.sidenav-container.show {
+  transform: translateX(0);
+}
+
+.sidenav-content {
+  background: teal;
+  width: 50%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.sidenav-content ul {
+  width: 100%;
+  padding: 0px 20px;
+}
+
+.sidenav-content i {
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.sidenav-content ul {
+  list-style: none;
+}
+
+.sidenav-content ul li {
+  padding: 7px 0;
+}
+.sidenav-content ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+}
+.sidenav-content ul li a:hover {
+  font-size: 17px;
+}
 
 /* to top */
 .to-top {
@@ -26,25 +98,11 @@ body {
   transition: visibility 0.3s ease;
 }
 
-header {
-  height: 200px;
-}
-
-/* Wallpaper */
-.wallpaper {
-  width: 100%;
-  height: 75%;
-}
-.wallpaper img {
-  width: 100%;
-  height: 100%;
-}
-
 /* Name */
 .name {
   width: 100%;
-  height: 25%;
-  background: salmon;
+  height: 60px;
+  background: teal;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,7 +167,7 @@ main .left {
 .cv-left-menu ul li {
   display: block;
   background: teal;
-  line-height: 50px;
+  line-height: 35px;
   text-align: center;
   border-bottom: 2px solid #f3f3f3;
 }
@@ -126,17 +184,17 @@ main .right {
 }
 
 .right div {
-  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
   margin-bottom: 25px;
-  padding: 25px;
+  padding: 15px;
 }
 .right div h3 {
-  background: salmon;
+  background: teal;
   text-align: center;
   text-transform: uppercase;
-  padding: 15px;
-  font-size: 32px;
-  color: teal;
+  padding: 10px;
+  font-size: 28px;
+  color: white;
   margin-bottom: 25px;
 }
 
@@ -153,6 +211,52 @@ main .right {
 /* Experience */
 .right .experience p {
   margin-bottom: 20px;
+}
+
+/* Projects */
+.right .projects a:first-child {
+  color: black;
+  text-decoration: none;
+}
+
+.right .projects h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.right .projects p {
+  margin-bottom: 10px;
+  font-style: italic;
+  font-size: 18px;
+}
+
+.right .projects h5 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.right .projects ul {
+  padding: 10px;
+}
+.right .projects iframe {
+  width: 100%;
+  height: 350px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.right .projects .view {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  text-decoration: none;
+  background: black;
+  color: white;
+  padding: 10px;
+}
+
+.right .projects .view:hover {
+  background: rgb(2, 104, 104);
 }
 
 /* hobbies */
@@ -206,7 +310,12 @@ main .right {
 
 /* Media queries */
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
+  nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+
   /* Name */
   .name {
     font-size: 32px;
@@ -256,6 +365,9 @@ main .right {
 }
 
 @media (max-width: 500px) {
+  .sidenav-content {
+    width: 70%;
+  }
   /* Name */
   .name {
     font-size: 22px;
@@ -305,5 +417,11 @@ main .right {
 
   .right div h3 {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .sidenav-content {
+    width: 90%;
   }
 }
