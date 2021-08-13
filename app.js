@@ -13,23 +13,23 @@ const app = express();
 app.use(xss())
 app.use(helmet());
 app.use(hpp())
-app.use(express.json())
 app.use(cors())
 
-// app.set('trust proxy', 1);
+app.set('trust proxy', 1);
 
 const limiter = rateLimit({
-  windowMs: 24 * 60 * 60 * 1000, 
-  max: 100
-});
-
-//  apply to all requests
-app.use(limiter);
-
-// POST REQUEST
-app.post('/',
-body('name').trim().escape().not().isEmpty().withMessage('Name is required'),
-body('email').trim().escape().not().isEmpty().withMessage('Email is required'),
+    windowMs: 24 * 60 * 60 * 1000, 
+    max: 100
+  });
+  
+  //  apply to all requests
+  app.use(limiter);
+  app.use(express.json())
+  
+  // POST REQUEST
+  app.post('/',
+  body('name').trim().escape().not().isEmpty().withMessage('Name is required'),
+  body('email').trim().escape().not().isEmpty().withMessage('Email is required'),
 body('message').trim().escape().not().isEmpty().withMessage('Message is required'),
 body('email').isEmail().withMessage('Enter a valid email')
 ,(req, res) => {
@@ -42,10 +42,11 @@ body('email').isEmail().withMessage('Enter a valid email')
   const {email , message, name} = req.body
 
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: "smtp.mailtrap.io",
+    port: 2525,
     auth: {
-      user: 'elsalvacion2022@gmail.com',
-      pass: 'Barrow@2020'
+      user: "001a0981ff4e35",
+      pass: "08d3d2697a6d6d"
     }
   });
   
@@ -65,12 +66,14 @@ body('email').isEmail().withMessage('Enter a valid email')
          }
        ]
      })
-    } else {
-      res.status(200).json({
-        msg: 'Message sent'
-      })
     }
+
+
   });
+
+  res.status(200).json({
+    msg: 'Message sent'
+  })
 })
 
 const PORT = process.env.PORT || 5000;
