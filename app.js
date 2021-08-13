@@ -10,13 +10,13 @@ const nodemailer = require('nodemailer');
 const app = express();
 
 // middlewares
-app.use(cors())
 app.use(xss())
 app.use(helmet());
 app.use(hpp())
 app.use(express.json())
+app.use(cors())
 
-app.set('trust proxy', 1);
+// app.set('trust proxy', 1);
 
 const limiter = rateLimit({
   windowMs: 30 * 24 * 60 * 60 * 1000, 
