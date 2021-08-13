@@ -14,13 +14,13 @@ app.use(cors())
 app.use(xss())
 app.use(helmet());
 app.use(hpp())
-
+app.use(express.json())
 
 app.set('trust proxy', 1);
 
 const limiter = rateLimit({
-  windowMs: 24 * 60 * 60 * 1000, 
-  max: 1000
+  windowMs: 30 * 24 * 60 * 60 * 1000, 
+  max: 5
 });
 
 //  apply to all requests
@@ -28,10 +28,12 @@ app.use(limiter);
 
 // POST REQUEST
 app.post('/',
-body('name').not().isEmpty().withMessage('Name is required'),
-body('email').not().isEmpty().withMessage('Email is required'),
-body('message').not().isEmpty().withMessage('Message is required')
+body('name').trim().escape().not().isEmpty().withMessage('Name is required'),
+body('email').trim().escape().not().isEmpty().withMessage('Email is required'),
+body('message').trim().escape().not().isEmpty().withMessage('Message is required'),
+body('email').isEmail().withMessage('Enter a valid email')
 ,(req, res) => {
+  console.log(req.body);
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });
