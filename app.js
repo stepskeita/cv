@@ -30,7 +30,6 @@ app.use(limiter);
 app.post('/',
 body('name').not().isEmpty().trim().escape().withMessage('Name is required'),
 body('email').not().isEmpty().trim().escape().withMessage('Email is required'),
-body('email').isEmail().withMessage('Enter a valid email'),
 body('message').not().isEmpty().trim().escape().withMessage('Message is required')
 ,(req, res) => {
   const errors = validationResult(req);
