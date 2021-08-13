@@ -1,0 +1,76 @@
+section {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section form {
+  width: 50%;
+  margin: 15px 0;
+}
+
+section form label {
+  display: block;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+section form input,
+textarea,
+button {
+  width: 100%;
+  border: 0;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid teal;
+}
+section form input,
+textarea {
+  background: transparent;
+}
+section form input:focus,
+textarea:focus,
+button:focus {
+  outline: 0;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+section form textarea {
+  max-width: 100%;
+  min-width: 100%;
+}
+
+section form button {
+  background: teal;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+}
+section form button i {
+  margin-left: 5px;
+}
+
+/* form validations */
+section form input.error {
+  border: 1px solid red;
+}
+
+/* media query for tables */
+@media (max-width: 900px) {
+  section form {
+    width: 70%;
+    margin: 10px 0;
+  }
+}
+
+/* media query for phone */
+
+@media (max-width: 900px) {
+  section form {
+    width: 90%;
+  }
+}
