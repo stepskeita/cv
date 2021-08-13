@@ -28,9 +28,9 @@ app.use(limiter);
 
 // POST REQUEST
 app.post('/',
-body('name').not().isEmpty().trim().escape().withMessage('Name is required'),
-body('email').not().isEmpty().trim().escape().withMessage('Email is required'),
-body('message').not().isEmpty().trim().escape().withMessage('Message is required')
+body('name').not().isEmpty().withMessage('Name is required'),
+body('email').not().isEmpty().withMessage('Email is required'),
+body('message').not().isEmpty().withMessage('Message is required')
 ,(req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
