@@ -120,8 +120,11 @@ nav i {
   font-size: 25px;
   color: white;
   opacity: 0.7;
-  visibility: hidden;
-  transition: visibility 0.3s ease;
+  transform: translateX(110vw);
+}
+.to-top.show {
+  transform: translateX(0);
+  transition: transform 0.7s ease;
 }
 
 /* Name */

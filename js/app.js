@@ -14,12 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
 function showArrow(e) {
     if(window.scrollY > 150) 
     {
-        toTop.style.visibility = 'visible'
+        toTop.classList.add('show')
     }
     else 
     {
-        toTop.style.visibility = 'hidden'
-
+        toTop.classList.remove('show')
     }
 }
 
