@@ -1,0 +1,41 @@
+.sample-project {
+  padding: 20px 40px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+.projects > div {
+  margin: 10px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+.projects .view {
+  background: rgb(2, 104, 104);
+}
+
+.projects .view:hover {
+  background: rgb(2, 65, 65);
+}
+
+.github-repo {
+  background: #000;
+  color: white;
+  width: fit-content;
+  padding: 15px;
+  margin: 20px auto;
+  text-decoration: none;
+  font-size: 18px;
+}
+.github-repo i {
+  padding-left: 10px;
+}
+@media (max-width: 700px) {
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+  }
+}
