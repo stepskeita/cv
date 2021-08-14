@@ -36,6 +36,9 @@
   .projects {
     display: grid;
     grid-template-columns: 1fr;
-    padding: 10px;
+    grid-gap: 10px;
+  }
+  .sample-project {
+    padding: 15px;
   }
 }
