@@ -11,6 +11,7 @@
   margin: 10px;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
   padding: 20px;
+  background: white;
 }
 .projects .view {
   background: rgb(2, 104, 104);
@@ -21,13 +22,14 @@
 }
 
 .github-repo {
-  background: #000;
-  color: white;
-  width: fit-content;
-  padding: 15px;
-  margin: 20px auto;
   text-decoration: none;
   font-size: 18px;
+  color: white;
+  background: #000;
+  width: fit-content;
+  padding: 7px;
+  display: block;
+  margin: 7px auto;
 }
 .github-repo i {
   padding-left: 10px;

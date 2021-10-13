@@ -14,7 +14,7 @@ body {
   background: #f3f3f3;
 }
 nav {
-  background: #f3f3f3;
+  background: white;
   color: white;
   position: sticky;
   top: 0;
@@ -49,6 +49,9 @@ nav i {
   padding: 5px;
   cursor: pointer;
   color: teal;
+}
+nav .toggle {
+  display: none;
 }
 
 /* Sidenav */
@@ -210,9 +213,9 @@ main .right {
 }
 
 .right div {
-  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
   margin-bottom: 25px;
   padding: 15px;
+  background: white;
 }
 .right div h3 {
   background: teal;
@@ -262,7 +265,7 @@ main .right {
 }
 
 .projects ul {
-  padding: 10px;
+  padding: 10px 25px;
 }
 .projects iframe {
   width: 100%;
@@ -272,7 +275,6 @@ main .right {
 }
 
 .projects .view {
-  display: block;
   text-align: center;
   font-size: 18px;
   text-decoration: none;
@@ -337,6 +339,9 @@ main .right {
 /* Media queries */
 
 @media (max-width: 900px) {
+  nav .toggle {
+    display: block;
+  }
   /* Name */
   .header-title {
     font-size: 32px;
