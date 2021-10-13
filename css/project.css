@@ -31,6 +31,9 @@
   display: block;
   margin: 7px auto;
 }
+.github-repo:hover {
+  background: teal;
+}
 .github-repo i {
   padding-left: 10px;
 }

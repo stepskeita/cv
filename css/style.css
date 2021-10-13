@@ -54,6 +54,23 @@ nav .toggle {
   display: none;
 }
 
+.github-repo {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  background: #000;
+  width: fit-content;
+  padding: 7px;
+  display: block;
+  margin: 7px auto;
+}
+.github-repo:hover {
+  background: teal;
+}
+.github-repo i {
+  padding-left: 10px;
+}
+
 /* Sidenav */
 .sidenav-container {
   position: fixed;
@@ -383,6 +400,7 @@ main .right {
 
   .right div {
     background: white;
+    margin-bottom: 15px;
   }
 
   .right div h3 {
@@ -413,7 +431,11 @@ main .right {
     padding: 5px;
     background: white;
   }
-
+  .right div {
+    margin-bottom: 25px;
+    padding: 15px;
+    background: white;
+  }
   .right div h3 {
     font-size: 20px;
   }
@@ -440,6 +462,11 @@ main .right {
 
   main .right {
     padding: 3px;
+    background: white;
+  }
+  .right div {
+    margin-bottom: 25px;
+    padding: 15px;
     background: white;
   }
 
