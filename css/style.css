@@ -381,6 +381,10 @@ main .right {
     display: none;
   }
 
+  .right div {
+    background: white;
+  }
+
   .right div h3 {
     font-size: 24px;
   }
@@ -407,6 +411,7 @@ main .right {
 
   main .right {
     padding: 5px;
+    background: white;
   }
 
   .right div h3 {
@@ -435,6 +440,7 @@ main .right {
 
   main .right {
     padding: 3px;
+    background: white;
   }
 
   .right div h3 {
