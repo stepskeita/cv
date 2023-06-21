@@ -59,7 +59,7 @@ const Profile = () => {
         alt="Alieu Keita"
         className="w-64 h-64 rounded-full object-scale-down mx-auto mb-4"
       />
-      <table>
+      <table className="mx-auto ">
         {demographicData.map((data) => (
           <tr key={data.value}>
             <td className="p-2">{data.key}</td>

@@ -71,7 +71,7 @@ const Projects = () => {
             />
           </a>
           <p className="mb-4">{project.details}</p>
-          {project.link && (
+          {/* {project.link && (
             <a
               target="_blank"
               rel="noreferrer"
@@ -80,7 +80,7 @@ const Projects = () => {
             >
               Visit {project.title}
             </a>
-          )}
+          )} */}
         </div>
       ))}
     </Card>
