@@ -1,5 +1,4 @@
 import React from "react";
-import Card from "./layout/Card";
 import { FaHandPointRight } from "react-icons/fa";
 
 const Skills = ({ skils, projectTitle }) => {
