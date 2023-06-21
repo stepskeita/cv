@@ -5,7 +5,7 @@ const Projects = () => {
   const projects = [
     {
       title: "STIGA OUTWEAR",
-      link: "stigaoutwear.com",
+      link: "https://stigaoutwear.com",
       details:
         "Stiga Outwear is the number one online sneaker store in The Gambia.",
       image: "img/stigaoutwear.png",
@@ -13,7 +13,7 @@ const Projects = () => {
 
     {
       title: "MARIAMA GAYE",
-      link: "mariamagaye.com",
+      link: "https://mariamagaye.com",
       details:
         "Mariama Gaye is a person website/blog for a Gambia-Swedish model",
       image: "img/mariamagaye.png",
@@ -21,7 +21,7 @@ const Projects = () => {
 
     {
       title: "STEELDALAL",
-      link: "steeldalal.com",
+      link: "https://steeldalal.com",
       details:
         "Steeldalal is a B2B company that specializes in the marketing of various types of steels and metals.",
       image: "img/steeldalal.png",
