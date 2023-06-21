@@ -57,6 +57,7 @@ const Profile = () => {
       <img
         src="img/headshot.png"
         alt="Alieu Keita"
+        loading="eager"
         className="w-64 h-64 rounded-full object-scale-down mx-auto mb-4"
       />
       <table className="mx-auto ">

@@ -65,6 +65,7 @@ const Projects = () => {
             className="w-full"
           >
             <img
+              loading="lazy"
               src={project.image}
               alt={project.title}
               className="w-full mb-2"
@@ -83,6 +84,17 @@ const Projects = () => {
           )} */}
         </div>
       ))}
+
+      <div className="w-fit mt-7">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          className=" bg-black text-white px-5 py-3 hover:bg-black/70 transition-colors duration-300"
+          href="https://github.com/stepskeita"
+        >
+          For More Of My Projects
+        </a>
+      </div>
     </Card>
   );
 };
