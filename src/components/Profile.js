@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  FaEnvelope,
   FaGithubAlt,
   FaLinkedinIn,
   FaLocationArrow,
@@ -41,6 +42,10 @@ const Profile = () => {
           stepskeita
         </a>
       ),
+    },
+    {
+      key: <FaEnvelope className="mr-2 text-xl " />,
+      value: "stepskeita@gmail.com",
     },
   ];
   return (

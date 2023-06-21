@@ -4,9 +4,9 @@ import Quote from "./components/Quote";
 
 function App() {
   return (
-    <div className="w-full flex items-stretch p-7 ">
-      <div className="w-full md:w-fit md:max-w-[300px]">
-        <div className="sticky top-0">
+    <div className="w-full flex flex-col lg:flex-row lg:items-stretch lg:p-7 ">
+      <div className="w-full lg:w-fit lg:max-w-[300px]">
+        <div className="sticky top-5">
           <Profile />
           <Quote />
         </div>
