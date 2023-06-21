@@ -11,7 +11,8 @@ const Quote = () => {
         </div>
         <div>
           "Life is like the whether. It can switch on you at any moment. Make
-          the best "
+          the best out of every moment and take it easy because time has a
+          sneaky way of correcting things."
         </div>
       </div>
     </Card>

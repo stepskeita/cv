@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./layout/Card";
+import Skills from "./Skills";
 
 const Projects = () => {
   const projects = [
@@ -9,6 +10,15 @@ const Projects = () => {
       details:
         "Stiga Outwear is the number one online sneaker store in The Gambia.",
       image: "img/stigaoutwear.png",
+      skills: [
+        "JAVASCRIPT",
+        "REACT.JS",
+        "NODE.JS",
+        "TAILWIND CSS",
+        "MYSQL",
+        "REDUX",
+        "EXPRESS.JS",
+      ],
     },
 
     {
@@ -17,6 +27,7 @@ const Projects = () => {
       details:
         "Mariama Gaye is a person website/blog for a Gambia-Swedish model",
       image: "img/mariamagaye.png",
+      skills: ["WORDPRESS", "HTML", "CSS3", "MYSQL", "PHP"],
     },
 
     {
@@ -25,6 +36,16 @@ const Projects = () => {
       details:
         "Steeldalal is a B2B company that specializes in the marketing of various types of steels and metals.",
       image: "img/steeldalal.png",
+      skills: [
+        "JAVASCRIPT",
+        "REACT.JS",
+        "NODE.JS",
+        "MATERIAL UI",
+        "MYSQL",
+        "REDUX",
+        "EXPRESS.JS",
+        "CSS3",
+      ],
     },
     {
       title: "FA2BEE INC.",
@@ -43,6 +64,14 @@ const Projects = () => {
         </>
       ),
       image: "img/fa2bee.png",
+      skills: [
+        "HTML",
+        "CSS",
+        "NODE.JS",
+        "JQUERY",
+        "TAILWIND CSS",
+        "JAVASCRIPT",
+      ],
     },
 
     {
@@ -51,13 +80,22 @@ const Projects = () => {
       details:
         "D-LIB is a digital library for schools and education ministries to host pdf documents and can accessed and read by anyone that access the public domain of the library.",
       image: "img/d-lib.png",
+      skills: [
+        "JAVASCRIPT",
+        "REACT.JS",
+        "NODE.JS",
+        "TAILWIND CSS",
+        "MONGODB",
+        "REDUX",
+        "EXPRESS.JS",
+      ],
     },
   ];
   return (
     <Card>
       <h2 className="font-extrabold text-2xl mb-5">Projects</h2>
       {projects.map((project) => (
-        <div key={project.title} className="my-7">
+        <div key={project.title} className="my-7 mb-10">
           <a
             href={project.link}
             target="_blank"
@@ -72,6 +110,7 @@ const Projects = () => {
             />
           </a>
           <p className="mb-4">{project.details}</p>
+          <Skills projectTitle={project.title} skils={project.skills} />
           {/* {project.link && (
             <a
               target="_blank"
