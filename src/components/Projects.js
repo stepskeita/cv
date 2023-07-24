@@ -49,7 +49,7 @@ const Projects = () => {
     },
     {
       title: "FA2BEE INC.",
-      link: "https://peaceful-muffin-848fc4.netlify.app/",
+      link: "https://tinyurl.com/fa2bee",
       details: (
         <>
           FA2BEE Inc. is the parent company of the FA2BEE brand, which is
